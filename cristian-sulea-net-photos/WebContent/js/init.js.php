@@ -1,3 +1,7 @@
+<?php
+    header("Content-type: application/javascript; charset: UTF-8");
+?>
+
 /*
 	Big Picture by HTML5 UP
 	html5up.net | @n33co
@@ -9,7 +13,7 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'max': { range: '*', href: 'css/style.css', containers: 1440, viewport: { scalable: false }, grid: { gutters: 40 } },
+			'max': { range: '*', href: 'css/style.css.php?album=<?php echo $_GET["album"]; ?>', containers: 1440, viewport: { scalable: false }, grid: { gutters: 40 } },
 			'wide': { range: '-1920', href: 'css/style-wide.css', containers: 1360 },
 			'normal': { range: '-1680', href: 'css/style-normal.css', containers: 1200 },
 			'narrow': { range: '-1280', href: 'css/style-narrow.css', containers: 960 },

@@ -1,3 +1,7 @@
+<?php
+    header("Content-type: text/css; charset: UTF-8");
+?>
+
 @charset 'UTF-8';
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
 @import url('font-awesome.min.css');
@@ -862,7 +866,7 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/intro.jpg');
+		background: url('images/overlay.png'), url('../albums/<?php echo $_GET["album"]; ?>/intro.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;

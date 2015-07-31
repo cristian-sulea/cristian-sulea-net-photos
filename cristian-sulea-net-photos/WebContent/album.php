@@ -54,8 +54,7 @@
 
   $counter = 0;
 
-  foreach (new DirectoryIterator('albums/' . $album . '/photos') as $file) {
-    if($file->isDot()) continue;
+  foreach (array_diff(scandir('albums/' . $album . '/photos', SCANDIR_SORT_ASCENDING), array('.', '..')) as $file) {
 
     $counter++;
 
@@ -72,7 +71,7 @@
     }
 
     echo '					<div class="4u">' . "\r\n";
-    echo '						<a href="albums/' . $album . '/photos/' . $file->getFilename() . '" class="image fit ' . $from . '"><img src="albums/' . $album . '/thumbs/' . $file->getFilename() . '" title="" alt="" /></a>' . "\r\n";
+    echo '						<a href="albums/' . $album . '/photos/' . $file . '" class="image fit ' . $from . '"><img src="albums/' . $album . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
     echo '					</div>' . "\r\n";
 
     if ($counter == 3) {

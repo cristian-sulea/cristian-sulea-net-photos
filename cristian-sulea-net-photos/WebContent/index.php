@@ -32,44 +32,50 @@
 	</header>
 
 
-	<section id="intro" class="main style1 dark fullscreen">
-		<div class="content container 75%">
-			<header>
-				<h2>Albums</h2>
-			</header>
-			<footer>
-				<a href="#work" class="button style2 down">Albums</a>
-			</footer>
-		</div>
-	</section>
+<!-- 	<section id="intro" class="main style1 dark fullscreen"> -->
+<!-- 		<div class="content container 75%"> -->
+<!-- 			<header> -->
+<!-- 				<h2>Albums</h2> -->
+<!-- 			</header> -->
+<!-- 			<footer> -->
+<!-- 				<a href="#work" class="button style2 down">Albums</a> -->
+<!-- 			</footer> -->
+<!-- 		</div> -->
+<!-- 	</section> -->
 
 
 	<section id="work" class="main style3 primary">
 		<div class="content container">
 			<div class="container 75%">
 
-				<div class="row 0% images">
-					<div class="4u">
-						<a href="?album" class="image fit from-left"><img src="albums/album/intro.jpg" title="" alt="" /></a>
-					</div>
-					<div class="4u">
-						<a href="albums/album/photos/02.jpg" class="image fit from-top"><img src="albums/album/thumbs/02.jpg" title="" alt="" /></a>
-					</div>
-					<div class="4u">
-						<a href="albums/album/photos/03.jpg" class="image fit from-right"><img src="albums/album/thumbs/03.jpg" title="" alt="" /></a>
-					</div>
-				</div>
-				<div class="row 0% images">
-					<div class="4u">
-						<a href="albums/album/photos/04.jpg" class="image fit from-left"><img src="albums/album/thumbs/04.jpg" title="" alt="" /></a>
-					</div>
-					<div class="4u">
-						<a href="albums/album/photos/05.jpg" class="image fit from-top"><img src="albums/album/thumbs/05.jpg" title="" alt="" /></a>
-					</div>
-					<div class="4u">
-						<a href="albums/album/photos/06.jpg" class="image fit from-right"><img src="albums/album/thumbs/06.jpg" title="" alt="" /></a>
-					</div>
-				</div>
+<?php
+
+  $counter = 0;
+
+  foreach (array_diff(scandir('albums', SCANDIR_SORT_DESCENDING), array('.', '..')) as $file) {
+
+	$json  = json_decode(file_get_contents('albums/' . $file . '/info.json'), TRUE);
+
+    echo '				<div class="row 0%">' . "\r\n";
+    echo '					<div class="3u">' . "\r\n";
+    echo '						<a href="?' . $file . '" class="image"><img src="albums/' . $file . '/intro.jpg" title="" alt="" /></a>' . "\r\n";
+    echo '					</div>' . "\r\n";
+    echo '				</div>' . "\r\n";
+
+    echo '				<div class="row 0%" style="text-align: left;">' . "\r\n";
+    echo '					<div class="12u">' . "\r\n";
+    echo '						<a href="?' . $file . '">' . $json['date'] . ' - ' . $json['title'] . ' ( ' . $json['route'] . ' )</a>' . "\r\n";
+    echo '					</div>' . "\r\n";
+    echo '				</div>' . "\r\n";
+
+    echo '				<div class="row 0%">' . "\r\n";
+    echo '					<div class="12u">' . "\r\n";
+    echo '						&nbsp;' . "\r\n";
+    echo '					</div>' . "\r\n";
+    echo '				</div>' . "\r\n";
+  }
+
+?>
 
 			</div>
 		</div>

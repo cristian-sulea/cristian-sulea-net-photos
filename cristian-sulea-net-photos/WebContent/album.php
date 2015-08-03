@@ -38,7 +38,9 @@
 				<h3><?php echo $json['route']; ?></h3>
 				<p>(<?php echo $json['date']; ?>)</p>
 			</header>
+<?php if (isset($json['description'])) { ?>
 			<p><?php echo $json['description']; ?></p>
+<?php } ?>
 			<footer>
 				<a href="#work" class="button style2 down">Photos</a>
 			</footer>

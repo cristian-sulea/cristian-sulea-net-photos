@@ -1,6 +1,10 @@
 {
-	"title":       "Bucegi",
-	"date":        "2015.02.21",
-	"route":       "Sinaia - Piciorul pietrei arse - Piatra arsă - Babele - Bușteni",
+	"intro": "01.jpg",
+	"dark":  "true",
+	
+	"title": "Bucegi",
+	"date":  "2015.02.21",
+	"route": "Sinaia - Piciorul pietrei arse - Piatra arsă - Babele - Bușteni",
+	
 	"description": "Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.<div align=\"right\"><a href=\"http://cristian.sulea.net\">Cristian Sulea</a></div>"
 }

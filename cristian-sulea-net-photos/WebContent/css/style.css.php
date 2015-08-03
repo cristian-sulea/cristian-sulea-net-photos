@@ -866,7 +866,7 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../albums/<?php echo $_GET["album"]; ?>/intro.jpg');
+		background: url('images/overlay.png'), url('../albums/<?php echo $_GET["album"]; ?>/photos/<?php echo $_GET["intro"]; ?>');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;

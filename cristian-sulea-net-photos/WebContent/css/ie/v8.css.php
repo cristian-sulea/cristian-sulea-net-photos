@@ -63,7 +63,7 @@
 
 	#intro {
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
-		background: url('../../albums/<?php echo $_GET["album"]; ?>/intro.jpg');
+		background: url('../../albums/<?php echo $_GET["album"]; ?>/photos/<?php echo $_GET["intro"]; ?>');
 		background-size: cover;
 	}
 

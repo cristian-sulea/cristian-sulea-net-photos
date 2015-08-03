@@ -1,14 +1,14 @@
 <?php
 
-	if (!isset($album) || !file_exists('albums/' . $album . '/info.json')) {
+	if (!isset($album) || !file_exists('albums/' . $album . '/config.json')) {
 		header('Location: /photos/');
 		exit();
 	}
 
-	$json  = json_decode(file_get_contents('albums/' . $album . '/info.json'), TRUE);
-
+	$json  = json_decode(file_get_contents('albums/' . $album . '/config.json'), TRUE);
 
 	$title = $json['title'] . ' (' . $json['route'] . ')';
+	$intro = $json['intro'];
 ?>
 
 <!DOCTYPE HTML>
@@ -31,7 +31,7 @@
 	</header>
 
 
-	<section id="intro" class="main style1 dark fullscreen">
+	<section id="intro" class="main style1 fullscreen<?php if ($json['dark'] == 'true') echo ' dark'; ?>">
 		<div class="content container 75%">
 			<header>
 				<h2><?php echo $json['title']; ?></h2>

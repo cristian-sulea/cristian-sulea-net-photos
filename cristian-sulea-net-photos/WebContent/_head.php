@@ -15,7 +15,7 @@
 <?php if (!isset($album)) { ?>
 	<script src="js/init.js"></script>
 <?php } else { ?>
-	<script src="js/init.js.php?album=<?php echo $album; ?>"></script>
+	<script src="js/init.js.php?album=<?php echo $album; ?>&intro=<?php echo $intro; ?>"></script>
 <?php } ?>
 
 	<noscript>
@@ -23,7 +23,7 @@
 <?php if (!isset($album)) { ?>
 		<link rel="stylesheet" href="css/style.css" />
 <?php } else { ?>
-		<link rel="stylesheet" href="css/style.css.php?album=<?php echo $album; ?>" />
+		<link rel="stylesheet" href="css/style.css.php?album=<?php echo $album; ?>&intro=<?php echo $intro; ?>" />
 <?php } ?>
 		<link rel="stylesheet" href="css/style-wide.css" />
 		<link rel="stylesheet" href="css/style-normal.css" />
@@ -33,6 +33,6 @@
 <?php if (!isset($album)) { ?>
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 <?php } else { ?>
-	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css.php?album=<?php echo $album; ?>" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css.php?album=<?php echo $album; ?>&intro=<?php echo $intro; ?>" /><![endif]-->
 <?php } ?>
 </head>

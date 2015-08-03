@@ -54,11 +54,11 @@
 
   foreach (array_diff(scandir('albums', SCANDIR_SORT_DESCENDING), array('.', '..')) as $file) {
 
-	$json  = json_decode(file_get_contents('albums/' . $file . '/info.json'), TRUE);
+	$json  = json_decode(file_get_contents('albums/' . $file . '/config.json'), TRUE);
 
     echo '				<div class="row 0%">' . "\r\n";
     echo '					<div class="3u">' . "\r\n";
-    echo '						<a href="?' . $file . '" class="image"><img src="albums/' . $file . '/intro.jpg" title="" alt="" /></a>' . "\r\n";
+    echo '						<a href="?' . $file . '" class="image"><img src="albums/' . $file . '/thumbs/' . $json['intro'] . '" title="" alt="" /></a>' . "\r\n";
     echo '					</div>' . "\r\n";
     echo '				</div>' . "\r\n";
 

@@ -52,7 +52,7 @@
 
   $counter = 0;
 
-  foreach (array_diff(scandir('albums', SCANDIR_SORT_DESCENDING), array('.', '..')) as $file) {
+  foreach (array_diff(scandir('albums', 1), array('.', '..')) as $file) {
 
 	$json  = json_decode(file_get_contents('albums/' . $file . '/config.json'), TRUE);
 

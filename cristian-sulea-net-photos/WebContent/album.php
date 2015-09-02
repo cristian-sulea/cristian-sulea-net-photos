@@ -56,7 +56,7 @@
 
   $counter = 0;
 
-  foreach (array_diff(scandir('albums/' . $album . '/photos', SCANDIR_SORT_ASCENDING), array('.', '..')) as $file) {
+  foreach (array_diff(scandir('albums/' . $album . '/photos', 0), array('.', '..')) as $file) {
 
     $counter++;
 

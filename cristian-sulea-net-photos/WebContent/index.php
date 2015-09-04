@@ -52,19 +52,23 @@
 
   $counter = 0;
 
-  foreach (array_diff(scandir('albums', 1), array('.', '..')) as $file) {
+  foreach (array_diff(scandir('albums', 1), array('.', '..')) as $folder) {
 
-	$json  = json_decode(file_get_contents('albums/' . $file . '/config.json'), TRUE);
-
-    echo '				<div class="row 0%">' . "\r\n";
-    echo '					<div class="3u">' . "\r\n";
-    echo '						<a href="?' . $file . '" class="image"><img src="albums/' . $file . '/thumbs/' . $json['intro'] . '" title="" alt="" /></a>' . "\r\n";
-    echo '					</div>' . "\r\n";
-    echo '				</div>' . "\r\n";
+	$json  = json_decode(file_get_contents('albums/' . $folder . '/config.json'), TRUE);
 
     echo '				<div class="row 0%" style="text-align: left;">' . "\r\n";
     echo '					<div class="12u">' . "\r\n";
-    echo '						<a href="?' . $file . '">' . $json['date'] . ' - ' . $json['title'] . ' ( ' . $json['route'] . ' )</a>' . "\r\n";
+    echo '						<a class="xxx1" href="?' . $folder . '">' . $json['date'] . ' - ' . $json['title'] . ' ( ' . $json['route'] . ' )</a>' . "\r\n";
+    echo '					</div>' . "\r\n";
+    echo '				</div>' . "\r\n";
+
+    echo '				<div class="row 0%">' . "\r\n";
+    echo '					<div class="12u">' . "\r\n";
+
+    foreach (array_diff(scandir('albums/' . $folder . '/photos', 0), array('.', '..')) as $file) {
+        echo '						<a class="image xxx2"><img src="albums/' . $folder . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
+    }
+
     echo '					</div>' . "\r\n";
     echo '				</div>' . "\r\n";
 

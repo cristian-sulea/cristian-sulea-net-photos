@@ -35,4 +35,6 @@
 <?php } else { ?>
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css.php?album=<?php echo $album; ?>&intro=<?php echo $intro; ?>" /><![endif]-->
 <?php } ?>
+
+	<link rel="stylesheet" href="css/xxx.css" />
 </head>

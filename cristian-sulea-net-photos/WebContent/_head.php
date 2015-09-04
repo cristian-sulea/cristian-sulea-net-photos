@@ -37,4 +37,6 @@
 <?php } ?>
 
 	<link rel="stylesheet" href="css/xxx.css" />
+
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>

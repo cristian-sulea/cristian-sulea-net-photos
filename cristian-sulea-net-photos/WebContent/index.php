@@ -8,7 +8,7 @@
 		exit();
 	}
 
-	$title = 'Photos';
+	$title = 'Photos | A personal photo gallery.';
 ?>
 
 <!DOCTYPE HTML>

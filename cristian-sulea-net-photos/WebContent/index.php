@@ -24,7 +24,7 @@
 
 		<nav id="nav">
 			<ul>
-				<li><a href="http://cristian.sulea.net">My Webpage</a></li>
+				<li><a href="http://cristian.sulea.net">Webpage</a></li>
 				<li><a href="http://cristian.sulea.net/blog/">Blog</a></li>
 			</ul>
 		</nav>
@@ -58,7 +58,7 @@
 
     echo '				<div class="row 0%" style="text-align: left;">' . "\r\n";
     echo '					<div class="12u">' . "\r\n";
-    echo '						<a class="xxx1" href="?' . $folder . '">' . $json['date'] . ' - ' . $json['title'] . ' ( ' . $json['route'] . ' )</a>' . "\r\n";
+    echo '						<h3><a class="xxx1" href="?' . $folder . '">' . $json['date'] . ' - ' . $json['title'] . ' ( ' . $json['route'] . ' )</a></h3>' . "\r\n";
     echo '					</div>' . "\r\n";
     echo '				</div>' . "\r\n";
 

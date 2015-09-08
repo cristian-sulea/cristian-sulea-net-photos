@@ -249,6 +249,10 @@
 					$window.trigger('resize');
 				});
 
+		photo = document.getElementById(window.location.hash.substring(1));
+		if (photo != null) {
+			photo.click();
+		}
 	});
 
 })(jQuery);

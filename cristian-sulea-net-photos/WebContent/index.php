@@ -66,7 +66,7 @@
     echo '					<div class="12u">' . "\r\n";
 
     foreach (array_diff(scandir('albums/' . $folder . '/photos', 0), array('.', '..')) as $file) {
-        echo '						<a class="image xxx2"><img src="albums/' . $folder . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
+        echo '						<a class="image xxx2" href="?' . $folder . '#' . $file . '"><img src="albums/' . $folder . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
     }
 
     echo '					</div>' . "\r\n";

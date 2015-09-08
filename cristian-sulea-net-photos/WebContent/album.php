@@ -73,7 +73,7 @@
     }
 
     echo '					<div class="4u">' . "\r\n";
-    echo '						<a href="albums/' . $album . '/photos/' . $file . '" class="image fit ' . $from . '"><img src="albums/' . $album . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
+    echo '						<a id="' . $file . '" href="albums/' . $album . '/photos/' . $file . '" class="image fit ' . $from . '"><img src="albums/' . $album . '/thumbs/' . $file . '" title="" alt="" /></a>' . "\r\n";
     echo '					</div>' . "\r\n";
 
     if ($counter == 3) {
